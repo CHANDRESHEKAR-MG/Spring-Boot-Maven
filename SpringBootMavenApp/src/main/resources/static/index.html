@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spring Boot Learning</title>
+</head>
+<body>
+
+    <h3>Chandu Learning</h3>
+
+    <h2 id="message">Hey!</h2>
+
+    <script>
+        fetch('/greet')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('message').innerText = "Hey! " + data;
+            });
+    </script>
+
+</body>
+</html>
+<html>
+<head>
+    <title>Greeting Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome!</h1>
+
+        <button onclick="getGreeting()">Get Greeting</button>
+
+        <h2 id="message"></h2>
+    </div>
+
+    <script>
+        function getGreeting() {
+            fetch('/greet')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('message').innerText = data;
+                });
+        }
+    </script>
+
+</body>
+</html>
