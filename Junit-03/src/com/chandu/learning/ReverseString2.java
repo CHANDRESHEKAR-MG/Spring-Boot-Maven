@@ -1,7 +1,5 @@
 package com.chandu.learning;
 
-import com.chandu.learning.ReverseString2;
-
 public class ReverseString2 {
 
 public static void main(String[] args) {
